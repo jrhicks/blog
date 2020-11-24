@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Jeffrey Hicks',
+  subtitle: 'Learning and building in public',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -25,9 +25,9 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Jeffrey Hicks',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Learning and building in public',
     contacts: {
       email: '',
       facebook: '#',
