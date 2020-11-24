@@ -25,22 +25,19 @@ Preview Window - Press Play Button and navigate as using a real device.
 
 ## Canvas Navigation
 
-[Command 1] - View Everything
-[Command 2] - Zoom selection to fit Screen
+* [Command 1] - View Everything
+* [Command 2] - Zoom selection to fit Screen
 
 ## Adding and Editing Text Layers
 
 https://www.invisionapp.com/studio/learn/adding-and-editing-text-layers/
 
-[Press T] - To add a text layer.
-[Pres ESC] - To escape editing the body.
-
-Color Picker - You can change the color picker to show "Global Colors", "Document Colors", or "Recent Colors".
-
-Auto: [Press T] Click
-Fixed: [Press T] Click and drag
-
-Centering - Center the box, Center the lettering in the box, set anchor point for responsive resizing
+* [Press T] - To add a text layer.
+* [Pres ESC] - To escape editing the body.
+* Color Picker - You can change the color picker to show "Global Colors", "Document Colors", or "Recent Colors".
+* Auto: [Press T] Click
+* Fixed: [Press T] Click and drag
+* Centering - Center the box, Center the lettering in the box, set anchor point for responsive resizing
 
 ## Managing Layers
 
