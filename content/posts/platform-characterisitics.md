@@ -1,7 +1,7 @@
 ---
 template: post
-title: Platform Characterisitics
-slug: platform-charcteristics
+title: Platform vs IT Services
+slug: platform-vs-it-services
 socialImage: /media/greece-85466_640.jpg
 draft: false
 date: 2020-11-25T14:26:35.232Z
