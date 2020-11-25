@@ -10,22 +10,19 @@ type Props = {
 
 const Feed = ({ edges }: Props) => (
   <div className={styles['feed']}>
+    <h1 className={styles['page__title']}>My Notes</h1>
     {edges.map((edge) => (
-      <div className={styles['feed__item']} key={edge.node.fields.slug}>
-        <div className={styles['feed__item-meta']}>
-          <time className={styles['feed__item-meta-time']} dateTime={ new Date(edge.node.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}>
-          { new Date(edge.node.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
-          </time>
-          <span className={styles['feed__item-meta-divider']} />
-          <span className={styles['feed__item-meta-category']}>
-            <Link to={edge.node.fields.categorySlug} className={styles['feed__item-meta-category-link']}>{edge.node.frontmatter.category}</Link>
-          </span>
+      <div className={styles['block']} key={edge.node.fields.slug}>
+        <div className={styles['block__date']}>
+          <i><time className={styles['feed__item-meta-time']} dateTime={ new Date(edge.node.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}>
+          { new Date(edge.node.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' })}
+          </time></i>
         </div>
-        <h2 className={styles['feed__item-title']}>
+        <div clasName={styles['block__body']}>
           <Link className={styles['feed__item-title-link']} to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
-        </h2>
-        <p className={styles['feed__item-description']}>{edge.node.frontmatter.description}</p>
-        <Link className={styles['feed__item-readmore']} to={edge.node.fields.slug}>Read</Link>
+          <br />
+          {edge.node.frontmatter.description}
+        </div>
       </div>
     ))}
   </div>

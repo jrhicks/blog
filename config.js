@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://jrhicks.netlify.app',
   pathPrefix: '/',
   title: 'Blog by Jeffrey Hicks',
   subtitle: 'Learning and building in public',
@@ -12,24 +12,36 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'My Notes',
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: 'Platform Resources',
+      path: '/pages/platform-resources'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
+      label: 'M&A Resources',
+      path: '/pages/ma-resources'
+    },
+    {
+      label: 'Design Resources',
+      path: '/pages/design-resources'
+    },
+    {
+      label: 'Developer Resources',
+      path: '/pages/developer-resources'
+    },
+    {
+      label: 'Execution Resources',
+      path: '/pages/execution-resources'
+    },
   ],
   author: {
     name: 'Jeffrey Hicks',
     photo: '/photo.jpg',
     bio: 'Learning and building in public',
     contacts: {
-      email: '',
+      email: 'jeff@10fitness.com',
       facebook: '#',
       telegram: '#',
       twitter: '#',
