@@ -8,7 +8,7 @@ draft: false
 
 ## People
 
-* [Matt Duckworth](http://rhapsodi.net/): Little Rock Advisor Group with corporate innovation and M&A capabilities.
+* [Matthew Duckworth](http://rhapsodi.net/): Little Rock Advisor Group with corporate innovation and M&A capabilities.
 
 ## Podcasts
 
