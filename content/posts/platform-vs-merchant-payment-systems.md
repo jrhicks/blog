@@ -12,6 +12,4 @@ Presentation Notes
 
 https://www.spreedly.com/blog/paymntsfn-fireside-chat-payment-platforms-vs-traditional-merchants
 
-Merchant - 
-
 Platform - Ability for customers to build on.  RESTFull APIs & SDKs
