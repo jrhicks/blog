@@ -27,13 +27,13 @@ Zapier's mission to connect everything has probably created the most approachabl
 
 * Triggers - The platform consumes data with triggers by polling or subscribing to webhooks.
 
-Help users find new data as soon as it’s available in your app. Triggers connect to webhooks or polling endpoints.
+ * Polling
 
- * Apps may need to poll external services for updates.  Alternatively external services may have a "subscribe" or "unsubscribe" feature.
+ * Subscribe / Unsubscribe 
 
-* Actions - Create or update records of integrated service.
+* Actions - The platform acts on other sytems by registering actions.  Presumably these registered actions can be connected to events in the system.  For example, an employee productivity app may want to registered Clock-In, Clock-Out actions with a system in HR.
 
-* Publish
+* Publish - Apps typically go through a lifecycle on a platform.  They can either be private to a specific account, or public.
 
  * Build
 
