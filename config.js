@@ -48,7 +48,7 @@ module.exports = {
       email: 'jeff@10fitness.com',
       facebook: '#',
       telegram: '#',
-      twitter: 'https://twitter.com/jrhicks',
+      twitter: 'jrhicks',
       github: '#',
       rss: '',
       vkontakte: '',
