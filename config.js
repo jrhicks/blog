@@ -35,6 +35,10 @@ module.exports = {
       label: 'Execution Resources',
       path: '/pages/execution-resources'
     },
+    {
+      label: 'Chess Resources',
+      path: '/pages/chess-resources'
+    },
   ],
   author: {
     name: 'Jeffrey Hicks',
