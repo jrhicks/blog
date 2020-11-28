@@ -11,13 +11,19 @@ category: Design React
 
 ## Goal
 
-Find a UI Kit that I can use in InVision Studio that is ultimately buildable in React Native.
+Find a UI Kit that:
+
+* Can express 4dx team dashboard
+
+* Has InVision components for easy prototyping
+
+* Has development path for React Native
 
 ## Find
 
 [Do UI Kit](https://www.invisionapp.com/inside-design/design-resources/do/) - Build striking mobile productivity apps with the Do UI kit.
 
-## Notes
+## Research Notes
 
 * [BuilderX](https://builderx.io/) - browser based design tool that codes React Native & React for you
 
