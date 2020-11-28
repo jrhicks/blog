@@ -7,7 +7,7 @@ module.exports = {
   subtitle: 'Learning and building in public',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 4,
+  postsPerPage: 1000,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
