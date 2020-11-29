@@ -40,4 +40,9 @@ Find a UI Kit that:
 
 ## Download Sketch File and Import into InVision
 
-*  [NativeBase Sketch Template](https://nativebase.io/sketch-template) - Import failed cause it's an old sketch file.
+* [NativeBase Sketch Template](https://nativebase.io/sketch-template) - Very relevant, but poorly organized components.
+
+* [IOS UI Kit](https://www.invisionapp.com/inside-design/design-resources/studio-prototype-ios-ui-kit/) - Relevant, much better organized and better named components.
+
+* [Icon Pack](https://www.invisionapp.com/inside-design/design-resources/essentials-icon-pack/)
+

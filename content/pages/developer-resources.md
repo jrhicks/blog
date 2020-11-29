@@ -10,3 +10,10 @@ Extensibility
 
 * [User Defined Fields](https://martinfowler.com/bliki/UserDefinedField.html) - Martin Fowler article discussing using HashMaps and other interesting techniques like having a table of cards per "project" and allowing a project to extend it's project.  In this way, any project can Extend the functionality of a Card.
 
+* [iFrame Communiction](http://pbojinov.github.io/iframe-communication/) - Basic two way iframe communication.  [React Native WebViews Communication](https://precor.github.io/web-api-bridge/)
+
+React
+
+* [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.  Winner of 2020 GitNation React OS Award for Productivity Booster.
+
+
