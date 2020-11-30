@@ -1,7 +1,7 @@
 ---
 template: post
-title: Architecting 4DX Platform Extensibility
-slug: architecting-4dx-app-extensibility
+title: Imagineering an insanely extensible 4DX Platform
+slug: imagineering-extensible-4dx-app
 socialImage: /media/greece-85466_640.jpg
 draft: false
 date: 2020-11-29T14:35:03.492Z
