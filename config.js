@@ -42,7 +42,7 @@ module.exports = {
   ],
   author: {
     name: 'Jeffrey Hicks',
-    photo: '/photo.jpg',
+    photo: '/bot_profile.png',
     bio: 'Learning and building in public',
     contacts: {
       email: 'jeff@10fitness.com',
