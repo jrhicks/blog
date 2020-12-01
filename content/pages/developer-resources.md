@@ -16,4 +16,5 @@ React
 
 * [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.  Winner of 2020 GitNation React OS Award for Productivity Booster.
 
+* [Lee Robinson](https://leerob.io/) - Author of FREE course [Learn Next.js today 100% free.](https://masteringnextjs.com/)
 
