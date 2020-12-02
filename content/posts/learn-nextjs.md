@@ -342,10 +342,209 @@ module.exports = withPlugins([withCSS, withMDX, withBlog], {
 
 ## Authentication
 
-https://www.youtube.com/watch?v=1BUT7T9ThlU&list=PL6bwFJ82M6FXjyBTVi6WSCWin8q_g_8RR&index=9
-
 * JWT
 
-* Auth0
+	* Providers
 
-* Firebase
+		* Auth0
+
+		* Firebase
+	
+* Authentication Example in DayDrink
+
+	* [utils/auth.js](https://github.com/leerob/daydrink/blob/50324a8e42659ce692d284e50d64e826145f4d9e/utils/auth.js) - library to intefrace with Firebase
+
+	* [pages/signin.js](https://github.com/leerob/daydrink/blob/50324a8e42659ce692d284e50d64e826145f4d9e/pages/signin.js) - 
+
+	* [components/Auth.js](https://github.com/leerob/daydrink/blob/50324a8e42659ce692d284e50d64e826145f4d9e/components/Auth.js) uses [react-hook-form](https://react-hook-form.com/)
+
+	* [withAuthModal] is a higher order component that you can do to wrap secure pieces of functionality.  Like [AddDealModal.js](https://github.com/leerob/daydrink/blob/50324a8e42659ce692d284e50d64e826145f4d9e/components/AddDealModal.js)  or [Voter.js](https://github.com/leerob/daydrink/blob/50324a8e42659ce692d284e50d64e826145f4d9e/components/Voter.js)
+
+
+## Testing
+
+Setup
+
+* Install Dependencies
+
+```
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.0.2",
+        "@testing-library/react": "^9.4.0",
+        "babel-jest": "^24.9.0",
+        "jest": "^24.9.0",
+        "mutationobserver-shim": "^0.3.3",
+    }
+```
+
+* Configure Test Runner
+
+Overide babel.rc
+
+```
+{
+    "presets": ["next/babel"]
+}
+```
+
+* Add Script to package.json
+
+```
+    "scripts": {
+        "test": "jest"
+    },
+```
+
+* Use [test-util.js](https://github.com/leerob/daydrink/blob/master/test/test-utils.js) to setup Global stuff.  Usefull for aurthorization and themes
+
+```
+import {render} from '@testing-library/react';
+import {ThemeProvider, ColorModeProvider} from '@chakra-ui/core';
+import '@testing-library/jest-dom';
+import 'mutationobserver-shim';
+
+const ChakraRenderer = ({children}) => {
+    return (
+        <ThemeProvider>
+            <ColorModeProvider value="dark">{children}</ColorModeProvider>
+        </ThemeProvider>
+    );
+};
+
+const customRender = (ui, options) =>
+    render(ui, {
+        wrapper: ChakraRenderer,
+        ...options
+    });
+
+export * from '@testing-library/react';
+export {customRender as render};
+```
+
+* Write a test.
+
+	* [Study BarCard.js example](https://github.com/leerob/daydrink/blob/master/test/components/BarCard.spec.js)
+
+	* Use [React Testing Library CheatSheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+	
+		* getBy - you know it's there
+
+		* findBy - Async Await
+
+		* queryBy - Multiple matches
+	
+	* Snapshot tests
+
+		* Good for Component Libraries
+
+		* Good for tiny components
+
+		* Horrible for large components (developers will tend to blindly ignore or blindly accept)
+
+	* Integration Tests
+
+		* [Study the signin.spec.js](https://github.com/leerob/daydrink/blob/master/test/pages/signin.spec.js)
+
+		* Mock things sparingly
+
+```
+jest.mock('next/router');
+jest.mock('../../utils/auth');
+
+        useRouter.mockReturnValue({push: expectedRouterPush});
+        useAuth.mockReturnValue({
+            signin: expectedSignIn,
+            userId: 123
+        });
+```
+	
+* Interact with UI
+
+```
+       await act(async () => {
+            fireEvent.change(email, {target: {value: expectedEmail}});
+            fireEvent.change(password, {target: {value: expectedPassword}});
+            fireEvent.click(signInButton);
+        });
+```
+
+* Report Errors in the Wild
+
+	* Sentry (Plugin)
+
+* Gracefully handle Errors
+
+	* Customize the [error page](https://github.com/leerob/daydrink/blob/master/pages/_error.js) `/pages/_error.js`
+
+## State Management & More
+
+* Redux -vs- React Context
+
+* Prop Drilling
+
+Redux
+
+* Needs some special considerations to not break static site compile
+
+* Concerns: want to avoid breaking static site compiling
+
+* `withRedux` ops a component out of static site 
+
+* Instructor suggests NOT using redux
+
+React Context API
+
+* Avoids concern of static site compiling
+
+* Does have neat dev tools
+
+* Create multiple store / providers
+
+* [useSearch Example](https://github.com/leerob/daydrink/search?q=useSearch)
+
+TypeScript
+
+* Next.js makes it easy to get going
+
+* [Next.js TypeScript Docs](https://nextjs.org/docs/basic-features/typescript)
+
+* Next.js Specific Types Exist
+
+	* Page
+
+	* API Component
+
+	* Request/Response
+
+* GraphQL Code Generation
+
+	* [Next.JS, TypeScript, and Code Generation](https://graphql-code-generator.com/docs/plugins/typescript)
+
+Dynamic Imports
+
+* Why?
+
+	* Performance Reasons
+
+	* Didn't work with Server Side Rendering
+
+Exporting & Deployment
+
+* Zeit.co's now - Highly recommended
+
+	* Git Flow
+
+	* Preview before merge
+
+	* now.js
+
+		* Redirects
+
+		* Env (private) secrets
+	
+* Netlify - Really great
+
+
+
+
+
