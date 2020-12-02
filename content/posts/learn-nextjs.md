@@ -187,12 +187,165 @@ module.exports = {
 
 	* Recommend Heroku, [One Click Hasura Install on Heroku](https://hasura.io/docs/1.0/graphql/core/deployment/deployment-guides/heroku.html)
 
-	* Why PostgreSQL
-	
-		* Great for Relationships
+	* Query and Mutate Prototype
 
-		* Has One, Has Many etc.
+		* Use in-browser explorer
+		
+		* `/graphql/v1`
 
-		* New Tooling to get up and going faster
+	* Query and Mutate in Next.js
 
-	* 
+		* Why Apollo -vs- SWR
+
+			* Industry standard
+
+			* A lot of functionality on top of query
+
+				* Mutations
+
+				* Linking multiple GraphQL Backends
+
+				* Caching
+
+		* useQuery
+
+[/graphql/queries.js](https://github.com/leerob/daydrink/blob/master/graphql/queries.js)
+```
+import gql from 'graphql-tag';
+
+export const GET_DEALS_QUERY = gql`
+    query getDeals($dayOfWeek: String!) {
+        deals(where: {daysActive: {dayOfWeek: {_eq: $dayOfWeek}}}) {
+            id
+            description
+            alcoholType
+            userDeals {
+                upvoted
+                userId
+                id
+            }
+            daysActive {
+                id
+                dayOfWeek
+                startTime
+                endTime
+                allDay
+            }
+            location {
+                id
+                name
+            }
+        }
+    }
+`;
+```
+
+[/graphql/hooks.js](https://github.com/leerob/daydrink/blob/6ce7157d852cda26eb0bead226b632f60e6632a1/graphql/hooks.js)
+
+```
+import {useQuery} from '@apollo/react-hooks';
+import {GET_DEALS_QUERY} from './queries';
+import {calculateScoreAndSortDesc} from '../utils/deals';
+
+export const useDeals = (dayOfWeek) => {
+    const {loading, error, data} = useQuery(GET_DEALS_QUERY, {
+        variables: {dayOfWeek}
+    });
+
+    if (!loading && data.deals) {
+        return {
+            loading,
+            error,
+            data: {
+                deals: calculateScoreAndSortDesc(data.deals)
+            }
+        };
+    }
+
+    return {
+        loading,
+        error,
+        data
+    };
+};
+```
+
+## Managing Assets and SEO
+
+* Zero Config
+
+* Public folder acts like routes
+
+	* imageoptim / pre-commit hook with husky
+
+* Meta tags and Google Analytics
+
+	* I believe you update [/pages/_document.js](https://github.com/leerob/daydrink/blob/6ce7157d852cda26eb0bead226b632f60e6632a1/pages/_document.js)
+
+	* https://developers.facebook.com/tools/debug/
+
+	* https://cards-dev.twitter.com/validator
+
+	* Chrome Extensions
+
+		* Chrome OG Image Preview
+
+		* SEO Minion Extension
+
+		* Accessiblity Insights Extension
+
+	* Lighthouse Audit
+
+## Building a blog with MDX
+
+MDX -vs- Headless CMS
+
+* Developers Love Markdown and MDX
+
+* Marketing folks and other would benefit from a headless CMS
+
+Headless CMS
+
+* Contentful
+
+* Sanity
+
+* getInitialProps
+
+MDX
+
+* next.config
+
+```
+const remarkHighlight = require('remark-highlight.js');
+const withPlugins = require('next-compose-plugins');
+
+const withCSS = require('@zeit/next-css');
+const withMDX = require('@zeit/next-mdx')({
+  options: {
+    mdPlugins: [remarkHighlight]
+  }
+});
+
+// Generates Blog Index
+const withBlog = require('next-mdx-blog');
+
+module.exports = withPlugins([withCSS, withMDX, withBlog], {
+  author: 'Andrew Lisowski',
+  authorLink: 'https://github.intuit.com/alisowski',
+  avatar: 'https://avatars2.githubusercontent.com/u/1192452?s=400&v=4',
+  pageExtensions: ['js', 'mdx']
+});
+```
+
+* Cool example is to use StaticKit to capture leads.
+
+## Authentication
+
+https://www.youtube.com/watch?v=1BUT7T9ThlU&list=PL6bwFJ82M6FXjyBTVi6WSCWin8q_g_8RR&index=9
+
+* JWT
+
+* Auth0
+
+* Firebase
