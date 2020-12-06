@@ -19,6 +19,13 @@ Video: [Designing with Tailwind CSS: Setting up Tailwind and PostCSS](https://ww
 
 Code: [Designing with TailwindCSS Github Repo](https://github.com/tailwindlabs/designing-with-tailwindcss)
 
+Tools: 
+
+* [Tawilwind IntelliSense](https://tailwindcss.com/docs/intellisense)
+
+* [Sizzy](https://sizzy.co/) - Commercial preview plugin
+
+
 ## Getting Up and Running
 
 Code: [Setting up Tailwind and PostCSS](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/01-setting-up-tailwind-and-postcss) - Github Repo
