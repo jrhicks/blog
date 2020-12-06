@@ -15,9 +15,13 @@ socialImage: "/media/42-line-bible.jpg"
 
 ## Course
 
-[Designing with Tailwind CSS: Setting up Tailwind and PostCSS](https://www.youtube.com/watch?list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&v=21HuwjmuS7A&index=1) - FREE Youtube Course
+Video: [Designing with Tailwind CSS: Setting up Tailwind and PostCSS](https://www.youtube.com/watch?list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&v=21HuwjmuS7A&index=1) - FREE Youtube Course
 
-## Simplest Project Setup
+Code: [Designing with TailwindCSS Github Repo](https://github.com/tailwindlabs/designing-with-tailwindcss)
+
+## Getting Up and Running
+
+Code: [Setting up Tailwind and PostCSS](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/01-setting-up-tailwind-and-postcss) - Github Repo
 
 1.  Install a few dependencies
 
@@ -25,7 +29,7 @@ socialImage: "/media/42-line-bible.jpg"
 
     * postcss-cli
 
-    * tailwindcss
+    * tailwindcss```
 
 
 2. Generate tailwind.config.js
@@ -65,7 +69,9 @@ build: 'postcss css/tailwind.css -0 public/build/tailwind.css'
 
 ## Utility first Workflow
 
-[Designing with Tailwind CSS: Utility first Workflow](https://www.youtube.com/watch?v=Ybybd3GCNn4&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=2) - FREE Youtube Course
+Video: [Designing with Tailwind CSS: Utility first Workflow](https://www.youtube.com/watch?v=Ybybd3GCNn4&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=2) - FREE Youtube Course
+
+Code: [The Utility-First Workflow](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/02-the-utility-first-workflow) - Github Repo
 
 * Logo
 
@@ -130,15 +136,15 @@ build: 'postcss css/tailwind.css -0 public/build/tailwind.css'
 
 [Designing with Tailwind CSS: Responsive Design](https://www.youtube.com/watch?v=Ff_n_QClipQ&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=3) - FREE Youtube Course
 
+[Designing with Tailwind CSS: Responstive Design](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/03-responsive-design) - Github Code
+
+
 ![](/media/learn_tailwind1.png)
 
 Take a second to setup a responsive design preview tool.
 
 * [Sizzy](https://sizzy.co/) - Commercial preview plugin
 
-* [HTTP Server / HTML Preview](https://marketplace.visualstudio.com/items?itemName=Flixs.vs-code-http-server-and-html-preview) - Free extension for visual studio code
-
-* [ResponsivelyApp](https://responsively.app/) - Develop responsive web apps 5x faster!  A must-have DevTool for all Front-End developers that will make your job easier.  ...and it is open-source too! 
 
 Use Media Selector
 
@@ -176,15 +182,15 @@ Use Media Selector
 
 * Disable Max width on large
 
-    * lg:max-w-full
+    * `lg:max-w-full`
 
 * Container
 
-    * lg:relative
+    * `lg:relative`
 
 * IMG
 
-    * inset-0 h-full w-full object-cover object-center
+    * `inset-0 h-full w-full object-cover object-center`
 
 ### Extra Large Screen
 
@@ -197,3 +203,62 @@ Use Media Selector
 ## Hover, Focus, and Active States
 
 [Designing with Tailwind CSS: Hover, Focus, and Active States](https://www.youtube.com/watch?v=olyRu5R1EZ4&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=4) - Free Youtube course by Adam Wathan
+
+[Designing with Tailwind CSS: Hover, Focus and Active States](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/04-hover-focus-and-active-styles) - Github Repo
+
+Since Tailwind permutes, some variants aren't active by default.  They are already enabled in places you would expect.
+
+* `hover:bg-indigo-400`
+
+* `focus:outline-none focus:shadow-outline`
+
+* `active:bg-indogo-600` doesn't work ... why?
+
+* Need to Enable, (**need all**,  **Order Matters**)
+
+tailwind.config.js
+```
+variants: {
+  backgroundColor: [responsive', 'hover', 'focus', 'active']
+}
+```
+
+## Composing Utilities with @apply
+
+[Designing with Tailwind CSS: Composing Utilities with @apply](https://www.youtube.com/watch?v=krSgBUmIgP0&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=5)
+
+[Designing with Tailwind CSS: Composing Utilities with @apply](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/05-composing-utilities-with-apply) - Github Repo
+
+Advice
+
+* Use sparingly
+
+* Doesn't work with variants
+
+* Don't hardcode breakpointes, use @screen directive
+
+How?
+
+* Open tailwind.css
+
+```
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold;
+}
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+```
+
+* Watch for Changes
+
+```
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+  },
+```  
+
