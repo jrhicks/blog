@@ -269,3 +269,59 @@ How?
   },
 ```  
 
+## Customizing Your Design System
+
+* [Designing with Tailwind CSS: Customizing Your Design System](https://www.youtube.com/watch?v=wtW6LodXkls&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=7) - Youtube Video
+
+* [Designing with Tailwind CSS: Customizing Your Design System](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/07-customizing-your-design-system) - Github Code
+
+Generate Tailwind Config
+
+* npx tailwind init tailwind-full.config.js --full
+
+Theme -vs- Extend
+
+* theme replaces, extend merges
+
+```
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'brand-blue': '#1992d4',
+      },
+
+  ...
+}
+```
+
+Now you can use brand blue 
+
+```
+bg-brand-blue
+```
+
+## Optimizing for Production with Purgecss
+
+[Designing with Tailwind CSS: Optimizing for Production with Purgecss](https://www.youtube.com/watch?v=bhoDwo24K5Q&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=8) - Youtube Video
+
+[Designing with Tailwind CSS: Optimizing for Production with Purgecss](https://github.com/tailwindlabs/designing-with-tailwindcss/tree/master/01-getting-up-and-running/08-optimizing-for-production) - Github Code
+
+[PurgeCSS](https://purgecss.com/) - PostCSS Plugin to remove some unused permutations.
+
+```
+npm i -D @fullhuman/postcss-purgecss
+```
+
+PurgeCSS is very very dumb.  It isn't parsing HTML.  Only run in production cause PurgeCSS slows things down
+
+```
+process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
+      content: [
+        './src/**/*.vue',
+        './public/index.html',
+      ],
+      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+    })
+```    
+
