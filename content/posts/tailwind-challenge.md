@@ -60,7 +60,6 @@ function Puzzle({ index, className, children }) {
 export default function ArtPage() {
     return (
         <>
-        <>
             <div className="flex">
                 <Puzzle index={0} className="bg-yellow-100">SQUARE</Puzzle>
                 <Puzzle index={1} className="bg-yellow-100">SQUARE</Puzzle>
@@ -89,7 +88,6 @@ export default function ArtPage() {
                 <Puzzle index={16} className="bg-gray-100" >SQUARE</Puzzle>
                 <Puzzle index={17} className="bg-gray-100">SQUARE</Puzzle>
             </div>
-        </>
         </>
     )
 }
