@@ -1,19 +1,21 @@
 ---
 template: post
-title: Tailwind Challenge
+title: Tailwind Challenge - Illustrate Brainteaser Solution
 slug: tailwind-challenge
-socialImage: /media/greece-65466_640.jpg
+socialImage: /media/tailwind-challenge2.png
 draft: false
-date: 2020-12-14T14:35:03.492Z
-description: I write some CSS with Tailwind to illustrate the answer to a viral brain teaser.
+date: 2020-12-16T14:35:03.492Z
+description: Tailwind Challenge - Illustrate solution to count-the-squaries brain-teaser with #tailwindcss
 category: tailwind challenge
 ---
 
-## Solving Internet Challenges with CSS
+## The Challenge
+
+Illustrate the solution to this count-the-squaries brain-teaser with #tailwindcss
 
 ![](/media/count-shapes-puzzle.png)
 
-## Could I solve this problem with TailwindCSS?
+## The Solution
 
 ```
 function Puzzle({ index, className, children }) {
@@ -93,5 +95,7 @@ export default function ArtPage() {
     )
 }
 ```
+
+## The Result
 
 ![](/media/tailwind-challenge2.png)
