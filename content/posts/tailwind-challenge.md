@@ -21,47 +21,45 @@ Illustrate the solution to this count-the-squaries brain-teaser with #tailwindcs
 function Puzzle({ index, className, children }) {
     const boxes = [
         "left-0 top-0 w-6 h-6",
-        "left-24 top-0 w-6 h-6",
-        "left-0 top-24 w-6 h-6",
-        "left-24 top-24 w-6 h-6",
-        "left-0 top-6 w-14 h-14",
-        "left-6 top-0 w-14 h-14",
-        "left-14 top-6 w-14 h-14",
-        "left-6 top-14 w-14 h-14",
-        "left-6 top-6 w-6 h-6",
-        "left-14 top-6 w-6 h-6",
-        "left-14 top-14 w-6 h-6",
-        "left-6 top-14 w-6 h-6",
-        "left-0 top-0 w-24 h-24",
-        "left-6 top-0 w-24 h-24",
-        "left-6 top-6 w-24 h-24",
-        "left-0 top-6 w-24 h-24",
-        "left-6 top-6 w-14 h-14",
-        "left-0 top-0 w-32 h-32",
+        "left-22 top-0 w-6 h-6",
+        "left-0 top-22 w-6 h-6",
+        "left-22 top-22 w-6 h-6",
+        "left-0 top-6 w-14 h-16",
+        "left-6 top-0 w-16 h-14",
+        "left-14 top-6 w-14 h-16",
+        "left-6 top-14 w-16 h-14",
+        "left-6 top-6 w-8 h-8",
+        "left-14 top-6 w-8 h-8",
+        "left-14 top-14 w-8 h-8",
+        "left-6 top-14 w-8 h-8",
+        "left-0 top-0 w-22 h-22",
+        "left-6 top-0 w-22 h-22",
+        "left-6 top-6 w-22 h-22",
+        "left-0 top-6 w-22 h-22",
+        "left-6 top-6 w-16 h-16",
+        "left-0 top-0 w-28 h-28",
     ]
 
     return (
-        <div className="flex flex-row">
-            <div className="w-32 h-32 m-4">
-                <div className="relative col-span-1">
-                    {
-                        boxes.map( coordinates => {
-                            return (<div key={coordinates} className={`absolute border ${coordinates} border-gray-600`} />)
-                        })
-                    }
-                    <div className={`absolute ${boxes[index]} ${className} border-4 border-gray-600`} />
-                </div>
+        <div className="w-28 m-4">
+        {children}
+        <div className="w-28 h-28">
+            <div className="relative col-span-1">
+                {
+                    boxes.map( coordinates => {
+                        return (<div className={`absolute border ${coordinates} border-gray-600`} />)
+                    })
+                }
+                <div className={`absolute ${boxes[index]} ${className} border-4 border-gray-600`} />
             </div>
-            
-            <div>
-            DFSDFSDF  {children}
-            </div>
+        </div>
         </div>
     )
 }
 
 export default function ArtPage() {
     return (
+        <>
         <>
             <div className="flex">
                 <Puzzle index={0} className="bg-yellow-100">SQUARE</Puzzle>
@@ -85,15 +83,17 @@ export default function ArtPage() {
                 <Puzzle index={12} className="bg-green-100">SQUARE</Puzzle>
                 <Puzzle index={13} className="bg-green-100" >SQUARE</Puzzle>
                 <Puzzle index={14} className="bg-green-100" >SQUARE</Puzzle>
-                <Puzzle index={15} className="bg-green-100" >YSQUAREES</Puzzle>
+                <Puzzle index={15} className="bg-green-100" >SQUARE</Puzzle>
             </div>
             <div className="flex">
                 <Puzzle index={16} className="bg-gray-100" >SQUARE</Puzzle>
                 <Puzzle index={17} className="bg-gray-100">SQUARE</Puzzle>
             </div>
         </>
+        </>
     )
 }
+
 ```
 
 ## The Result
