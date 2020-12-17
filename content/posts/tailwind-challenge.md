@@ -5,7 +5,7 @@ slug: tailwind-square-challenge
 socialImage: /media/tailwind-challenge2.png
 draft: false
 date: 2020-12-16T14:35:03.492Z
-description: Tailwind Challenge - Illustrate solution to count-the-squaries brain-teaser with #tailwindcss
+description: Tailwind Challenge - Illustrate solution to count-the-squares-brainteaser with #tailwindcss
 category: tailwind challenge
 ---
 
