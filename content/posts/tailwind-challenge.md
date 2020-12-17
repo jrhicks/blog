@@ -1,7 +1,7 @@
 ---
 template: post
 title: Tailwind Challenge - Illustrate Brainteaser Solution
-slug: tailwind-challenge
+slug: tailwind-square-challenge
 socialImage: /media/tailwind-challenge2.png
 draft: false
 date: 2020-12-16T14:35:03.492Z
