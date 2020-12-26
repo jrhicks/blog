@@ -25,4 +25,3 @@ draft: false
 ## Attribution
 
 * Social image - [CC](https://creativecommons.org/licenses/by-sa/2.0/) - やましこ https://flic.kr/p/2iDKXCn
-

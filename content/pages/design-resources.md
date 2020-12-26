@@ -6,6 +6,14 @@ socialImage: /media/greece-85466_640.jpg
 draft: false
 ---
 
+## Youtube Videos on Layout and Composition
+
+* [Layout and Composition](https://www.youtube.com/watch?v=a5KYlHNKQB8) - Delightfull beginner intro to Proximity, white space, alignment, constrast, and hierarchy.
+
+* [Website Layout Tips](https://www.youtube.com/watch?v=WmjBoasDa2Q) - Pragmatic take on using size to create contrast and hiarchy by including something big, something medium & something small.
+
+* [Intro to VAS](https://www.youtube.com/watch?v=eiV7E_LVlxs) - Interesting intro to Focus user attention using techniques and [VAS Tools](https://vas.3m.com/)
+
 ## Courses
 
 * [Master the Power of InVision Studio](https://www.invisionapp.com/studio/learn) - FREE - Explore the ins and outs of InVision Studio, and discover techniques and tips for transforming your designs into powerful concepts.

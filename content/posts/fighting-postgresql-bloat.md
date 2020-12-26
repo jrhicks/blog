@@ -1,7 +1,7 @@
 ---
 template: post
-title: Fighting PostgreSQL bloat with Logical Replication on Heroku
-slug: imagineering-extensible-4dx-app
+title: Fighting PostgreSQL bloat with Logical Backup and Resore on Heroku
+slug: fighting-postgresql-bloat-on-heroku
 socialImage: /media/46611631795_6c9ce00750_w.jpg
 draft: true
 date: 2020-12-19T14:35:03.492Z
@@ -9,7 +9,24 @@ description: Let's shrink our database size.  Many attempts just don't work.  Ch
 category: Heroku PostgreSQL
 ---
 
-## The Challenge
+## The Situation
+
+heroku pg:bloat
+
+ ```table | public     | members                                                      |   5.8 | 9185 MB
+ table | public     | system_logs                                                  |  50.9 | 576 MB
+ table | public     | events                                                       |   6.3 | 39 MB```
+
+heroku pg:table-size
+
+```           name            |    size
+----------------------------+------------
+ members                    | 12 GB
+ system_logs                | 607 MB
+ recurring_services         | 82 MB
+ events                     | 54 MB```
+
+## Failed Attempts
 
 If you've every attempted to clean up your PostgreSQL you may have noticed it's size doesn't really decrease.  
 
@@ -23,10 +40,13 @@ If you've every attempted to clean up your PostgreSQL you may have noticed it's 
 
 * [repcloud](https://github.com/the4thdoctor/repcloud)  - Looks complicated and dubious
 
+## Used Solution
 
-## A Candidate
+Logically copy all the data into a new database.
 
-[Logical Replication](https://severalnines.com/database-blog/overview-logical-replication-postgresql) - March 2018
+`heroku addons:create heroku-postgresql:standard-0 --app APPNAME`
+
+
 
 ## References amd Attribution
 
