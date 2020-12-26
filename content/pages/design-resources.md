@@ -6,6 +6,10 @@ socialImage: /media/greece-85466_640.jpg
 draft: false
 ---
 
+## Conference Talks
+
+* [Component Independence and Layout Strategies](https://www.youtube.com/watch?v=Mvg7WHV5oYE) - Brad Westfall - April 11th 2017 
+
 ## Youtube Videos on Layout and Composition
 
 * [Layout and Composition](https://www.youtube.com/watch?v=a5KYlHNKQB8) - Delightfull beginner intro to Proximity, white space, alignment, constrast, and hierarchy.
