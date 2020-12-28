@@ -6,13 +6,11 @@ socialImage: /media/greece-85466_640.jpg
 draft: false
 ---
 
-Extensibility
+## Javascript
 
-* [User Defined Fields](https://martinfowler.com/bliki/UserDefinedField.html) - Martin Fowler article discussing using HashMaps and other interesting techniques like having a table of cards per "project" and allowing a project to extend it's project.  In this way, any project can Extend the functionality of a Card.
+* [What the heck is the Event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ) - Philip Roberts | JSConf EU | 2014
 
-* [iFrame Communiction](http://pbojinov.github.io/iframe-communication/) - Basic two way iframe communication.  [React Native WebViews Communication](https://precor.github.io/web-api-bridge/)
-
-React
+## React
 
 * [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.  Winner of 2020 GitNation React OS Award for Productivity Booster.
 
@@ -20,6 +18,6 @@ React
 
 * [Sam Selikoff](https://www.youtube.com/channel/UCgN4rDA3UNQ1OKQRXJd0nwg) - Web, React developer
 
-Event Sourcing
+## Event Sourcing
 
 * [Offline first apps event sourcing](https://flpvsk.com/blog/2019-07-20-offline-first-apps-event-sourcing/) - Andrey Salomatin 2019

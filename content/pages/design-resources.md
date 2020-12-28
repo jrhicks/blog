@@ -8,7 +8,9 @@ draft: false
 
 ## Conference Talks
 
-* [Component Independence and Layout Strategies](https://www.youtube.com/watch?v=Mvg7WHV5oYE) - Brad Westfall - April 11th 2017 
+* [Component Independence and Layout Strategies](https://www.youtube.com/watch?v=Mvg7WHV5oYE) - Brad Westfall - April 11th, 2017
+
+* [UI Principles for Programmers](https://www.youtube.com/watch?v=ko0jgfRuxJM) - Brad Westfall - August 19th, 2015
 
 ## Youtube Videos on Layout and Composition
 

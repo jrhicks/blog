@@ -20,10 +20,6 @@ module.exports = {
       path: '/pages/platform-resources'
     },
     {
-      label: 'M&A Resources',
-      path: '/pages/ma-resources'
-    },
-    {
       label: 'Design Resources',
       path: '/pages/design-resources'
     },
