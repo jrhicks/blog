@@ -34,6 +34,8 @@ draft: false
 
 * [Design for Developers](https://github.com/sdras/design-for-developers) - Sarah Drasner - Front End Masters - $39/mo
 
-## Tools
+## Misc
 
-* [Custom Transitions](https://cubic-bezier.com/#.17,.67,.83,.67)
+* [Custom Transitions](https://cubic-bezier.com/#.17,.67,.83,.67) - Refine Animations
+
+* [Lightning Design Layouts](https://www.lightningdesignsystem.com/guidelines/layout/) - Design Guidelines with awesome insight into Record, Reference, and Workspace layouts.
