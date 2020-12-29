@@ -12,6 +12,12 @@ draft: false
 
 * [UI Principles for Programmers](https://www.youtube.com/watch?v=ko0jgfRuxJM) - Brad Westfall - August 19th, 2015
 
+* [Refactoring UI](https://www.youtube.com/watch?v=7Z9rrryIOC4) - Steve Schoger | Refactoring UI | CSS Day 2019
+
+* [How to think like a Visual Designer](https://www.youtube.com/watch?v=hlI6xGfBjkQ) - Steve Schoger | Laracon VII - 2019
+
+* [The Immutable Rules of UX](https://www.youtube.com/watch?v=OtBeg5eyEHU) - Jacob Nielsen - 2019
+
 ## Youtube Videos on Layout and Composition
 
 * [Layout and Composition](https://www.youtube.com/watch?v=a5KYlHNKQB8) - Delightfull beginner intro to Proximity, white space, alignment, constrast, and hierarchy.
@@ -26,6 +32,7 @@ draft: false
 
 * [ReactNative for Designers](https://designcode.io/react-native) - Design+Code course by Meng To
 
+* [Design for Developers](https://github.com/sdras/design-for-developers) - Sarah Drasner - Front End Masters - $39/mo
 
 ## Tools
 
