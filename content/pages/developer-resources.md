@@ -10,6 +10,12 @@ draft: false
 
 * [What the heck is the Event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ) - Philip Roberts | JSConf EU | 2014
 
+## Fast Rails
+
+* [Advanced aRel: When ActiveRecord Just Isn't Enough](https://www.youtube.com/watch?v=ShPAxNcLm3o) - RailsConf 2014
+
+* [Faster Ruby APIs with PostgreSQL](https://goiabada.blog/faster-ruby-apis-with-postgres-238c2f4a272c) - Medium Article
+
 ## React
 
 * [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.  Winner of 2020 GitNation React OS Award for Productivity Booster.

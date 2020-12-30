@@ -14,6 +14,8 @@ draft: false
 
 * [Lightning Locker](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm) - Lightning Locker enhances security by isolating Lightning components that belong to one namespace from components in a different namespace
 
+* [Locker Service](https://www.youtube.com/watch?v=A60BQbtE4sQ) - Training Video describing component isolation using Locker service and iFrames.
+
 * [In-App Extensibility](https://www.sap.com/documents/2018/05/606d1ee8-037d-0010-87a3-c30de2ffd8ff.html) - In-App Extensibility of SAP, September 2020.
 
 * [4 Must Haves for an Extensible Platform](https://billingplatform.com/blog/4-must-haves-for-an-extensible-platform) - Data Models, UI, Business Process, Connectivity and Integration
