@@ -34,6 +34,12 @@ draft: false
 
 * [Design for Developers](https://github.com/sdras/design-for-developers) - Sarah Drasner - Front End Masters - $39/mo
 
+## Tailwind Resources
+
+* [TailwindUI](https://tailwindui.com/components)
+
+* [TailwindUI HTML-to-JSX](https://tailwind-ui-html-to-jsx.vercel.app/)
+
 ## Misc
 
 * [Custom Transitions](https://cubic-bezier.com/#.17,.67,.83,.67) - Refine Animations
